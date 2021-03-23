@@ -8,10 +8,8 @@
 #define L_WIDTH 4
 #define NOT_ACT_BUT -1
 
-void DisplayText(classXY coord, const char* string)
-{
+void DisplayText(classXY coord, const char* string) {
 	int j = strlen(string);
-
 	glColor3f(0, 0, 0);
 	glRasterPos2f(coord.x, coord.y);
 	for (int i = 0; i < j; i++) {
@@ -34,9 +32,6 @@ void Rectangle(classXY coord, classXY size) {
 	BlLine(classXY(coord.x + size.x, coord.y), classXY(coord.x + size.x, coord.y - size.y));
 	BlLine(classXY(coord.x + size.x, coord.y - size.y), classXY(coord.x, coord.y - size.y));
 	BlLine(classXY(coord.x, coord.y - size.y), coord);
-
-
-//	glRectf(coord.x, coord.y, coord.x + size.x, coord.y + size.y);
 }
 
 void MyButton::Draw(bool selected) {
