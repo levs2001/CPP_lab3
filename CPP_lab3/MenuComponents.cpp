@@ -5,8 +5,8 @@
 #include <GL\freeglut.h>
 
 void BlRect(classXY size, classXY coord) {
-	glColor3ub(0, 0, 0);
-	glRectf(-0.2f, 0.4f, 0.2f, 0.0f);
+	glColor3ub(255, 255, 255);
+	glRectf(coord.x, coord.y, coord.x + size.x, coord.y + size.y);
 }
 
 void MyButton::Draw(bool selected) {

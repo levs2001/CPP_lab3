@@ -8,9 +8,9 @@ class MyMenu;
 
 class classXY {
 public:
-	size_t x;
-	size_t y;
-	classXY(size_t x, size_t y) :x(x), y(y) {}
+	float x;
+	float y;
+	classXY(float x, float y) :x(x), y(y) {}
 	classXY(const classXY& size) :x(size.x), y(size.y) {};
 };
 
