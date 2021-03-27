@@ -143,12 +143,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MenuComponents.cpp" />
-    <ClCompile Include="Singleton.cpp" />
+    <ClCompile Include="MenuComponents\MenuComponents.cpp" />
+    <ClCompile Include="Singleton\Singleton.cpp" />
+    <ClCompile Include="TextSystem\TextSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MenuComponents.h" />
-    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="MenuComponents\MenuComponents.h" />
+    <ClInclude Include="Singleton\Singleton.h" />
+    <ClInclude Include="TextSystem\TextSystem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

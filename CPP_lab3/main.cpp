@@ -3,8 +3,7 @@
 #include <GL\freeglut.h>
 #include <iostream>
 
-#include "Singleton.h"
-#include "MenuComponents.h"
+#include "MenuComponents\MenuComponents.h"
 
 
 MyMenu* pMenu_g;
