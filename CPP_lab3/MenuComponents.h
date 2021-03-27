@@ -17,10 +17,6 @@ public:
 		return (c1.x == c2.x && c1.y == c2.y);
 	}
 };
-//
-//bool operator== (const classXY& c1, const classXY& c2) {
-//	return c1.x == c2.x && c1.y == c2.y;
-//}
 
 
 namespace Primitives {
@@ -29,6 +25,7 @@ namespace Primitives {
 	void DisplayText(classXY coord, const char* string);
 	void FillRectangle(classXY coord, classXY size);
 }
+
 
 class MenuBlock;
 
@@ -96,9 +93,6 @@ public:
 	MyButton& GetBut(size_t num) {
 		return buts.at(num);
 	}
-	//vector<MyButton>& GetButs() {
-	//	return buts;
-	//}
 
 private:
 	string name;
@@ -107,15 +101,8 @@ private:
 	vector<MyButton> buts;
 };
 
-//bool operator== (const MenuBlock& m1, const MenuBlock& m2) {
-//	return m1.GetName() == m2.GetName() && m1.GetCoord() == m2.GetCoord();
-//}
-
 class MyMenu {
 public:
-	/*void SetMenues(vector<MenuBlock> newMenues) {
-		menues = newMenues;
-	}*/
 	void Init(vector<MenuBlock> newMenues);
 	void Init();
 

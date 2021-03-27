@@ -23,12 +23,7 @@ void display()
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	pMenu_g->Draw();
-	glLineWidth(50); //задаем толщину
-	glColor3ub(60, 170, 60);
-	glBegin(GL_LINES);
-	glVertex2f(-0.9, 0.0);
-	glVertex2f(0.9, 0);
-	glEnd();
+	
 	glFlush();
 }
 

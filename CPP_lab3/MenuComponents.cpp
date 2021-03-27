@@ -68,7 +68,6 @@ void MyMenu::Init(vector<MenuBlock> newMenues) {
 	activeBut = 0;
 	menues = newMenues;
 	menuWay.push_back(&(menues.front()));
-	//pActiveMenu = menuWay.back();
 }
 
 void MyMenu::Init() {
@@ -90,7 +89,6 @@ void MyMenu::Init() {
 
 	activeBut = 0;
 	menuWay.push_back(&(menues.front()));
-	//pActiveMenu = menuWay.back();
 }
 
 void MyMenu::Draw() {
