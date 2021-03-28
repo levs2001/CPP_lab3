@@ -21,10 +21,19 @@
     <ClCompile Include="MenuComponents\MenuComponents.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Singleton\Singleton.cpp">
+    <ClCompile Include="TextSystem\TextSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TextSystem\TextSystem.cpp">
+    <ClCompile Include="TextSystem\tinyxml\tinystr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextSystem\tinyxml\tinyxml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextSystem\tinyxml\tinyxmlerror.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextSystem\tinyxml\tinyxmlparser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,10 +41,13 @@
     <ClInclude Include="MenuComponents\MenuComponents.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Singleton\Singleton.h">
+    <ClInclude Include="TextSystem\TextSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TextSystem\TextSystem.h">
+    <ClInclude Include="TextSystem\tinyxml\tinystr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextSystem\tinyxml\tinyxml.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

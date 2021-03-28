@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<menues>
+	<menu name="menu1" xCoord="-1" yCoord="1" xSize="0.2" ySize="1" />
+	<menu name="menu2" xCoord="-0.8" yCoord="1" xSize="0.2" ySize="1" />
+</menues>
+<buttons>
+	<button name="but1" xCoord="-1" yCoord="1" xSize="0.2" ySize="0.1" menuName="menu1" submenuName="menu2" />
+	<button name="but2" xCoord="-1" yCoord="0.9" xSize="0.2" ySize="0.1" menuName="menu1" />
+	<button name="but3" xCoord="-1" yCoord="0.8" xSize="0.2" ySize="0.1" menuName="menu1" />
+	<button name="but4" xCoord="-0.8" yCoord="1" xSize="0.2" ySize="0.1" menuName="menu2" />
+	<button name="but5" xCoord="-0.8" yCoord="0.9" xSize="0.2" ySize="0.1" menuName="menu2" />
+	<button name="but6" xCoord="-0.8" yCoord="0.8" xSize="0.2" ySize="0.1" menuName="menu2" />
+</buttons>

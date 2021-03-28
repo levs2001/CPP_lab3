@@ -31,19 +31,23 @@ class MenuBlock;
 
 class MyButton {
 public:
-	MyButton(size_t num, string name = "but", classXY coord = classXY(-1, 1), classXY size = classXY(0.2, 0.1), MenuBlock* submenu = nullptr)
-		: num(num), name(name), coord(coord), size(size), submenu(submenu) {}
+	MyButton(/*size_t num, */string name = "NotInit but", classXY coord = classXY(-1, 1), classXY size = classXY(0.2, 0.1), MenuBlock* submenu = nullptr)
+		: /*num(num),*/ name(name), coord(coord), size(size), submenu(submenu) {}
 
 	MyButton(const MyButton& otherBut) : num(otherBut.num), name(otherBut.name), size(otherBut.size), coord(otherBut.coord), submenu(otherBut.submenu) {}
 
-	MyButton() : num(-1), name("NotInit but"), size(classXY(0.2, 0.1)) {}
+	//MyButton() : num(-1), name("NotInit but"), size(classXY(0.2, 0.1)) {}
 
-	void Change(size_t num, string name = "but", classXY coord = classXY(-1, 1), classXY size = classXY(0.2, 0.1), MenuBlock* submenu = nullptr) {
-		this->num = num;
+	void Change(/*size_t num, */string name = "but", classXY coord = classXY(-1, 1), classXY size = classXY(0.2, 0.1), MenuBlock* submenu = nullptr) {
+		/*this->num = num;*/
 		this->name = name;
 		this->coord = coord;
 		this->size = size;
 		this->submenu = submenu;
+	}
+
+	void SetNum(size_t num) {
+		this->num = num;
 	}
 
 	size_t GetNum() {
@@ -53,6 +57,10 @@ public:
 	
 	MenuBlock* GetSubmenu() {
 		return submenu;
+	}
+
+	string GetName() const {
+		return name;
 	}
 private:
 	size_t num;
@@ -94,6 +102,18 @@ public:
 		return buts.at(num);
 	}
 
+	void SetName(string name) {
+		this->name = name;
+	}
+
+	void SetCoord(classXY coord) {
+		this->coord = coord;
+	}
+	
+	void SetSize(classXY size) {
+		this->size = size;
+	}
+
 private:
 	string name;
 	classXY coord;
@@ -103,7 +123,7 @@ private:
 
 class MyMenu {
 public:
-	void Init(vector<MenuBlock> newMenues);
+	void Init(vector<MenuBlock>& newMenues);
 	void Init();
 
 	void SetActiveBut(size_t newActiveBut) {

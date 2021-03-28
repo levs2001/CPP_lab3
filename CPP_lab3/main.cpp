@@ -4,21 +4,20 @@
 #include <iostream>
 
 #include "MenuComponents\MenuComponents.h"
-
+#include "TextSystem\TextSystem.h"
 
 MyMenu* pMenu_g;
 
-void SysMenuInit() {
+void SysMenuInit(vector<MenuBlock>& newMenues) {
 	pMenu_g = new MyMenu;
-	pMenu_g->Init();
+	pMenu_g->Init(newMenues);
 }
 
 void SysMenuDelete() {
 	delete pMenu_g;
 }
 
-void display()
-{
+void display() {
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	pMenu_g->Draw();
@@ -48,9 +47,11 @@ void processSpecialKeys(int key, int x, int y) {
 }
 
 
-int main(int argc, char* argv[])
-{
-	SysMenuInit();
+int main(int argc, char* argv[]) {
+	TextSystem sys;
+	sys.Init("..\\test.xml");
+
+	SysMenuInit(sys.GetMenues());
 	
 	glutInit(&argc, argv);
 	glutInitWindowSize(1800, 800);

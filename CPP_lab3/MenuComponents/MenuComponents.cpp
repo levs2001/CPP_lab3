@@ -53,6 +53,7 @@ void MyButton::Draw(bool selected) {
 
 
 void MenuBlock::AddBut(MyButton& but) {
+	but.SetNum(buts.size());
 	buts.push_back(but);
 }
 
@@ -64,7 +65,7 @@ void MenuBlock::Draw(int selBut_num) {
 }
 
 
-void MyMenu::Init(vector<MenuBlock> newMenues) {
+void MyMenu::Init(vector<MenuBlock>& newMenues) {
 	activeBut = 0;
 	menues = newMenues;
 	menuWay.push_back(&(menues.front()));
@@ -75,16 +76,16 @@ void MyMenu::Init() {
 		menues.push_back(MenuBlock("name", classXY(-1 + 0.2 * i, 1), classXY(0.2, 1)));
 	}
 
-	MyButton but(0, "but1", classXY(-1 + 0.2 * 0, 1), classXY(0.2, 0.1), &(menues.at(1)));
+	MyButton but("but1", classXY(-1 + 0.2 * 0, 1), classXY(0.2, 0.1), &(menues.at(1)));
 	menues.at(0).AddBut(but);
 
-	but.Change(1, "but2", classXY(-1 + 0.2 * 0, 1 - 0.1 * 1), classXY(0.2, 0.1));
+	but.Change("but2", classXY(-1 + 0.2 * 0, 1 - 0.1 * 1), classXY(0.2, 0.1));
 	menues.at(0).AddBut(but);
 
-	but.Change(0, "but3", classXY(-1 + 0.2 * 1, 1), classXY(0.2, 0.1));
+	but.Change("but3", classXY(-1 + 0.2 * 1, 1), classXY(0.2, 0.1));
 	menues.at(1).AddBut(but);
 
-	but.Change(1, "but4", classXY(-1 + 0.2 * 1, 1 - 0.1 * 1), classXY(0.2, 0.1));
+	but.Change("but4", classXY(-1 + 0.2 * 1, 1 - 0.1 * 1), classXY(0.2, 0.1));
 	menues.at(1).AddBut(but);
 
 	activeBut = 0;

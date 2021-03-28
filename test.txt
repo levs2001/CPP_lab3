@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<components>
+	<menu name="menu1" xCoord="-1" yCoord="1" xSize="0.2" ySize="1" />
+	<button name="but1" xCoord="-1" yCoord="1" xSize="0.2" ySize="0.1" />
+</components>
